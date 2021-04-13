@@ -10,17 +10,17 @@ type WxCrypto struct {
 
 // WxSignature signature
 type WxSignature struct {
-	Signature string `query:"signature"`
-	Timestamp string `query:"timestamp"`
-	Nonce     string `query:"nonce"`
-	Echostr   string `query:"echostr"`
+	Signature string `form:"signature"`
+	Timestamp string `form:"timestamp"`
+	Nonce     string `form:"nonce"`
+	Echostr   string `form:"echostr"`
 }
 
 // WxEncryptSignature jsapi signature
 type WxEncryptSignature struct {
 	WxSignature
-	MsgSignature string `query:"msg_signature"`
-	EncryptType  string `query:"encrypt_type"`
+	MsgSignature string `form:"msg_signature"`
+	EncryptType  string `form:"encrypt_type"`
 }
 
 // WxEncryptMessage 加密文件存储
